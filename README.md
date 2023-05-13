@@ -12,3 +12,4 @@ This is a full-stack blog application post and review different foods and recipe
 ## Collaborators 
 
 This app was brought to you by the Spoonful crew: <i>Deja Clarke, Addy Rodriguez, and Krystal Lopez.</i>
+
