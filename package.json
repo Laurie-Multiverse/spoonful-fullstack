@@ -2,12 +2,12 @@
   "name": "spoonful-fullstack",
   "version": "1.2.0",
   "description": "This is a recipe/food review blog app created using the MV tech stack",
-  "main": "index.js",
   "scripts": {
     "test": "jest --verbose --coverage=true",
     "test:report": "jest --coverage=true",
-    "start-client-dev": "parcel public/index.html --open",
-    "start": "node server/seed.js && node server.js",
+    "build": "parcel build public/index.html",
+    "client": "parcel public/index.html --open",
+    "start": "concurrently \"node server/seed.js && node server.js\" \"npm run client\"",
     "start-api": "nodemon server.js",
     "seed": "node server/seed.js"
   },
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/the-spoonful-blog/spoonful-fullstack#readme",
   "dependencies": {
     "babel": "^6.23.0",
+    "concurrently": "^8.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
